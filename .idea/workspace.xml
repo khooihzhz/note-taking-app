@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11a426fb-4335-49a0-84cc-e95074d4a8ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CAT201.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/homepage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/image/twotone_sticky_note_2_black_24dp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/views.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Webpage/image/logoquicknote.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpage/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603799215262</updated>
       <workItem from="1603799217450" duration="5488000" />
+      <workItem from="1603808412258" duration="3258000" />
+      <workItem from="1603812385881" duration="4685000" />
     </task>
     <servers />
   </component>
@@ -97,6 +94,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -106,5 +104,13 @@
       <screen x="72" y="27" width="1646" height="901" />
     </state>
     <state x="656" y="261" width="467" height="439" key="#Web_Browsers/72.27.1646.901@72.27.1646.901" timestamp="1603803421052" />
+    <state x="370" y="145" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603814159631">
+      <screen x="72" y="27" width="1368" height="873" />
+    </state>
+    <state x="370" y="145" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1368.873@72.27.1368.873" timestamp="1603814159631" />
+    <state x="419" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1603816837295">
+      <screen x="72" y="27" width="1368" height="873" />
+    </state>
+    <state x="419" y="214" width="672" height="678" key="search.everywhere.popup/72.27.1368.873@72.27.1368.873" timestamp="1603816837295" />
   </component>
 </project>

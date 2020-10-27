@@ -26,3 +26,51 @@
 .main-body{
     padding-top: 30px;
 }
+
+.welcome-body{
+    background-color: antiquewhite;
+    height: 100%;
+    padding-top: 110px;
+}
+
+.logo-text{
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 48px;
+}
+
+.logo{
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.button-styling{
+    box-shadow: 2px 3px 0px -1px #899599;
+    background:linear-gradient(to bottom, #f6fae1 5%, #e0e0c3 100%);
+    background-color:#f6fae1;
+    border-radius:5px;
+    border:1px solid #999983;
+    display:inline-block;
+    cursor:pointer;
+    color:#307485;
+    font-family:"Courier New", Courier, monospace;
+    font-size:17px;
+    font-weight:bold;
+    padding:15px 28px;
+    text-decoration:none;
+    margin-right: 20px;
+}
+
+.button-text{
+    text-decoration: none;
+    color: dimgray;
+}
