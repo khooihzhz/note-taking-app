@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11a426fb-4335-49a0-84cc-e95074d4a8ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Webpage/create_file.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/homepage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/storage/abc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/storage/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpage/storage/tset.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Webpage/views.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/homepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpage/create_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpage/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpage/views.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpage/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +82,7 @@
       <workItem from="1603808412258" duration="3258000" />
       <workItem from="1603812385881" duration="4685000" />
       <workItem from="1603857652058" duration="3447000" />
+      <workItem from="1603884258454" duration="3478000" />
     </task>
     <servers />
   </component>

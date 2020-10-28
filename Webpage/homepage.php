@@ -6,8 +6,8 @@
     <!--CSS FILE-->
     <link rel="stylesheet" href="style.css">
     <!--PHP FILE-->
-    <?php include 'create_file.php';
-    create_file();?>
+    <?php include 'functions.php';
+            create_file();?>
 </head>
 <nav class="navbar">
     <img src="image/twotone_sticky_note_2_black_24dp.png">
