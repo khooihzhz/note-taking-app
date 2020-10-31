@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add New Note</title>
+    <title>Add Note - QuickNote</title>
     <!--CSS FILE-->
     <link rel="stylesheet" href="style.css">
     <!--PHP FILE-->
     <?php include 'functions.php';
             create_file();?>
 </head>
-<nav class="navbar">
-    <img src="image/twotone_sticky_note_2_black_24dp.png">
-    <a href="#home" class="navbar-text">Notes</a>
-</nav>
 
+<!-- NavBar -->
+<div id="navbar">
+    <a href="welcome.html" id="home">Home</a>
+    <a href="homepage.php" id="new-note">New</a>
+    <a href="views.php" id="view-note">View</a>
+</div>
+<!-- END of NavBar -->
 <body class="main-body">
 <!--NavBar here-->
 
 <!--Title-->
-<h2>Write new notes here ....</h2>
-
-<!--Submit new Note note-->
-<form method="POST">
-    <label for="filename"> Enter Filename: </label><input type="text" id="filename" name="filename" placeholder="filename">
-    <input type="text" id="notes" name="notes" placeholder="write something here">
-    <input type="submit" value="Save">
-    <button>Clear</button>
-</form>
-<!--END new Note function-->
+<div class="title"><h2 class="homepage-title">Create Your Own Notes!</h2></div>
+<div>
+    <!--Submit new Note note-->
+    <form method="POST" class="form-container"> <!-- Added Styling Form -->
+        <label for="filename"> Enter Filename: </label><input class="form" type="text" id="filename" name="filename" placeholder="filename">
+        <br>
+        <textarea id="notes" name="notes" rows="25" cols="55" placeholder="Write your notes here!"></textarea>
+        <br><br>
+        <input class="input-styling" type="submit" value="Save">    <!-- Added Styling -->
+        <input class="input-styling" type="reset" value="Clear">
+    </form>
+    <!--END new Note function-->
+</div>
 </body>
 </html>
