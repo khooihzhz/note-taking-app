@@ -1,30 +1,78 @@
-.navbar{
-    overflow: hidden;
-    background-color: lightgray;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.navbar a{
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    font-size: 17px;
-    padding: 15px 15px 15px 5px;
+#navbar a {
+    position: absolute;
+    left: -80px;
+    transition: 0.75s;
+    padding: 15px;
+    width: 90px;
     text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+    color: black;
+    border-radius: 0 5px 5px 0;
 }
 
-.navbar img{
-    float: left;
-    text-align: center;
-    padding-top : 13px;
-    padding-left: 15px;
+#navbar a:hover {
+    left: 0;
+}
+
+#home {
+    top: 15px;
+    background-color: #f62651;
+}
+
+#new-note {
+    top: 75px;
+    background-color: #de4d72;
+}
+
+#view-note {
+    top: 135px;
+    background-color: #db7ca3;
 }
 
 .main-body{
-    padding-top: 30px;
+    background-color: antiquewhite;
+}
+
+.title{
+    padding: 20px;
+    background: linear-gradient(to bottom, #caeff3, #faebd7);
+}
+
+.homepage-title{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 35px;
+    color: darkslategrey;
+    text-align: center;
+}
+
+.form-container{
+    text-align: center;
+}
+
+.form{
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.input-styling{
+    background:linear-gradient(to bottom, #80ffff 5%, #c7f6ff 100%);
+    background-color:#80ffff;
+    border-radius:15px;
+    border:1px solid #1298eb;
+    display:inline-block;
+    cursor:pointer;
+    color:#1c1c1c;
+    font-family: "DejaVu Serif";
+    font-size:15px;
+    padding:5px 25px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #8e95ad;
+}
+
+.input-styling:hover {
+    background:linear-gradient(to bottom, #a4dff5 5%, #70d4f5 100%);
+    background-color:#a4dff5;
 }
 
 .welcome-body{
@@ -68,6 +116,11 @@
     padding:15px 28px;
     text-decoration:none;
     margin-right: 20px;
+}
+
+.button-styling:hover{
+    background-color: #f6fae1;
+    background:linear-gradient(to bottom, #e0e0c3, #f6fae1 100%);
 }
 
 .button-text{
