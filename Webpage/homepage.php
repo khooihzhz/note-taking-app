@@ -18,21 +18,34 @@
 </div>
 <!-- END of NavBar -->
 <body class="main-body">
-<!--NavBar here-->
 
 <!--Title-->
-<div class="title"><h2 class="homepage-title">Create Your Own Notes!</h2></div>
-<div>
-    <!--Submit new Note note-->
-    <form method="POST" class="form-container"> <!-- Added Styling Form -->
-        <label for="filename"> Enter Filename: </label><input class="form" type="text" id="filename" name="filename" placeholder="filename">
-        <br>
-        <textarea id="notes" name="notes" rows="25" cols="55" placeholder="Write your notes here!"></textarea>
-        <br><br>
-        <input class="input-styling" type="submit" value="Save">    <!-- Added Styling -->
-        <input class="input-styling" type="reset" value="Clear">
-    </form>
-    <!--END new Note function-->
+<div class="main-container">
+    <div class="title"><h2 class="homepage-title">Create Your Own Notes!</h2></div>
+    <div>
+        <!--Submit new Note note-->
+        <form method="POST" class="form-container">
+            <div class="file-div">
+                <div class="file-input">
+                <label>Filename: </label>
+                <input class="form" type="text" id="filename" name="filename" required placeholder="Your Filename">
+                </div>
+                <div class="img-note">
+                    <img id="pencil" src="image/pencil.png">
+                </div>
+            </div>
+
+            <div class="writing-area">
+            <textarea id="notes" name="notes"  placeholder="Write your notes here!"></textarea>
+            </div>
+
+            <div class="submit-container">
+                <input class="submit-btn" type="submit" value="Save" style="margin-left: -30px; margin-right: 20px;">
+                <input class="submit-btn" type="reset" value="Clear">
+            </div>
+        </form>
+        <!--END new Note function-->
+    </div>
 </div>
 </body>
 </html>
