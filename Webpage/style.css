@@ -1,4 +1,4 @@
-#navbar a {
+.navbar a {
     position: absolute;
     left: -80px;
     transition: 0.2s;
@@ -7,27 +7,27 @@
     text-decoration: none;
     font-size: 20px;
     font-style: italic;
-    color: black;
+    color: white;
     border-radius: 0 5px 5px 0;
     font-weight: bold;
     font-family: Consolas,monaco,monospace;
 }
 
-#navbar a:hover {
+.navbar a:hover {
     left: 0;
 }
 
-#home {
+.home {
     top: 15px;
     background-color: #f62651;
 }
 
-#new-note {
+.new-note {
     top: 75px;
     background-color: #de4d72;
 }
 
-#view-note {
+.view-note {
     top: 135px;
     background-color: #db7ca3;
 }
@@ -54,9 +54,9 @@
 }
 
 .submit-btn{
-    background: #80ffff linear-gradient(to bottom, #80ffff 5%, #c7f6ff 100%);
+    background: whitesmoke linear-gradient(to bottom, whitesmoke 5%, lightsteelblue 100%);
     border-radius:15px;
-    border:1px solid #1298eb;
+    border:1px solid #4b4e50;
     display:inline-block;
     cursor:pointer;
     color:#1c1c1c;
@@ -68,7 +68,7 @@
 }
 
 .submit-btn:hover {
-    background: #a4dff5 linear-gradient(to bottom, #a4dff5 5%, #70d4f5 100%);
+    background: whitesmoke linear-gradient(to bottom, lightsteelblue 5%, whitesmoke 100%);
 }
 
 .welcome-body{
@@ -172,4 +172,46 @@ textarea{
 
 .submit-container{
     padding-top: 50px;
+}
+
+.viewpage-title{
+    font-family: Consolas,monaco,monospace;
+    font-size: 35px;
+    color: darkslategrey;
+    text-align: center;
+}
+
+.list-container{
+    padding-top: 30px;
+    padding-left: 15%;
+    font-family: Consolas,monaco,monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkslateblue;
+    background-color: antiquewhite;
+    background: linear-gradient(to top, #caeff3, #faebd7 50%)
+}
+
+.file-button{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.read-container{
+    font-family: Consolas,monaco,monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkslateblue;
+    padding-top: 10px;
+    padding-left: 15%;
+    background: linear-gradient(to bottom, #caeff3, #faebd7);
+}
+
+#read-styling{
+    font-size: 20px;
+    font-family: Consolas,monaco,monospace;
+    font-weight: normal;
+    color: black;
+    padding-left: 30px;
 }

@@ -11,20 +11,20 @@
 </head>
 
 <!-- NavBar -->
-<div id="navbar">
-    <a href="welcome.html" id="home">Home</a>
-    <a href="homepage.php" id="new-note">New</a>
-    <a href="views.php" id="view-note">View</a>
+<div class="navbar">
+    <a href="welcome.html" class="home">Home</a>
+    <a href="homepage.php" class="new-note">New</a>
+    <a href="views.php" class="view-note">View</a>
 </div>
 <!-- END of NavBar -->
-<body class="main-body">
 
+<body class="main-body">
 <!--Title-->
 <div class="main-container">
     <div class="title"><h2 class="homepage-title">Create Your Own Notes!</h2></div>
     <div>
         <!--Submit new Note note-->
-        <form method="POST" class="form-container">
+        <form method="POST">
             <div class="file-div">
                 <div class="file-input">
                 <label>Filename: </label>

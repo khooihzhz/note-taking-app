@@ -31,7 +31,8 @@ function list_file(){
 
     // loop through every available files
     foreach ($files as $file) {
-        echo "<p><a href='views.php?file=$file'> $file </a> </p>";
+        //echo "<p><a href='views.php?file=$file'> $file </a> </p>";
+        echo "<ul> <li><a class='file-button' href='views.php?file=$file'> $file</a> </li></ul>";
     }
 
 }
