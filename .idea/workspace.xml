@@ -20,22 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11a426fb-4335-49a0-84cc-e95074d4a8ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Webpage/image/trash.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_20,_11_06_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_20__11_06_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Webpage/storage/ffffcx.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Webpage/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/abc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/babi.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/hello.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/newfile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/te.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/test.txt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/storage/tset.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpage/views.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/views.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +83,7 @@
       <workItem from="1604886239432" duration="364000" />
       <workItem from="1604991980642" duration="12067000" />
       <workItem from="1605852316380" duration="3401000" />
+      <workItem from="1605861801199" duration="345000" />
     </task>
     <servers />
   </component>
