@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <!--PHP FILE-->
     <?php include 'functions.php';
-            create_file();?>
+            $filename = $_POST['filename'];
+            $text_file = '';
+            if (file_exists("storage/$filename.txt"))
+            {
+                $text_file = file_get_contents('storage/'.$filename.'.txt');
+            }
+            else
+            {
+                file_put_contents("storage/$filename.txt", '');
+            } ?>
 </head>
 
 <!-- NavBar -->
 <div class="navbar">
     <a href="welcome.html" class="home">Home</a>
-    <a href="homepage.php" class="new-note">New</a>
+    <a href="filename.php" class="new-note">New</a>
     <a href="views.php" class="view-note">View</a>
 </div>
 <!-- END of NavBar -->
@@ -23,12 +32,12 @@
 <div class="main-container">
     <div class="title"><h2 class="homepage-title">Create Your Own Notes!</h2></div>
     <div>
+
         <!--Submit new Note note-->
-        <form method="POST">
+        <form method="POST" action="views.php">
             <div class="file-div">
                 <div class="file-input">
-                <label>Filename: </label>
-                <input class="form" type="text" id="filename" name="filename" required placeholder="Your Filename">
+                    <p style="color: black"> Filename :<?php echo $filename ?></p>
                 </div>
                 <div class="img-note">
                     <img id="pencil" src="image/pencil.png">
@@ -36,7 +45,8 @@
             </div>
 
             <div class="writing-area">
-            <textarea id="notes" name="notes"  placeholder="Write your notes here!"></textarea>
+                <input type="hidden" name="filename" value="<?php echo $filename;?>">
+            <textarea id="notes" name="notes"  placeholder="Write your notes here!"><?php echo ($text_file); ?></textarea>
             </div>
 
             <div class="submit-container">

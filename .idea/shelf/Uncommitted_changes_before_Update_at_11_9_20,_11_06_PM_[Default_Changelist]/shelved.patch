@@ -1,0 +1,76 @@
+Index: Webpage/functions.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n// Create file function\n// if receive POST action\nfunction create_file(){\n    if(isset($_POST['filename']) and isset($_POST['notes']))\n    {\n        // declare variable\n        $filename = $_POST['filename'];\n        $note = $_POST['notes'];\n\n        // FUNCTION TO CHECK IF FILENAME EXISTED\n        // RUN CONFIRMATION TO REPLACE OR CHANGE NAME\n\n        // CREATE A NEW FILE\n        $create_file = fopen(\"storage/$filename.txt\", 'a');\n\n        // WRITE ON FILE\n        fwrite($create_file, $note);\n        // CLOSE FILE\n        fclose($create_file);\n    }\n}\n\n// CREATE SECTION\n\n// SCAN THROUGH DIRECTORIES\nfunction list_file(){\n    $dir = 'storage';\n    // SCAN THROUGH DATABASE\n    $files = array_diff(scandir($dir), array('..', '.'));\n\n    // loop through every available files\n    foreach ($files as $file) {\n        echo \"<p><a href='views.php?file=$file'> $file </a> </p>\";\n    }\n\n}\n\n// READ FILE\nfunction read_file(){\n    // CHECK IF URL GOT PARAMETER\n    if (isset($_GET['file'])) {\n        {\n            // GET URL FILENAME\n           $file = $_GET['file'];\n           $open_file = fopen(\"storage/$file\", \"r\");\n           echo fgets($open_file);\n           fclose ($open_file);\n        }\n    }\n}\n\n\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Webpage/functions.php	(revision 77c173531386434c12bd45f2ac6f122ba47b6472)
++++ Webpage/functions.php	(date 1604886664894)
+@@ -11,6 +11,9 @@
+         // FUNCTION TO CHECK IF FILENAME EXISTED
+         // RUN CONFIRMATION TO REPLACE OR CHANGE NAME
+ 
++        if (file_exists("storage/$filename.txt")){
++            echo("<p>FILE EXISTS !</p>");
++        }
+         // CREATE A NEW FILE
+         $create_file = fopen("storage/$filename.txt", 'a');
+ 
+@@ -21,6 +24,12 @@
+     }
+ }
+ 
++// CHECK FILE EXISTS FUNCTION
++
++function check_file(){
++
++}
++
+ // CREATE SECTION
+ 
+ // SCAN THROUGH DIRECTORIES
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"11a426fb-4335-49a0-84cc-e95074d4a8ab\" name=\"Default Changelist\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/Webpage/image/pencil.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Webpage/storage/.txt\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Webpage/storage/abc.txt\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Webpage/homepage.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Webpage/homepage.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Webpage/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Webpage/style.css\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n        <option value=\"CSS File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"PHP 7.4\" />\n  <component name=\"ProjectId\" id=\"1jSYyauwO9A3uSVPATnDfGcCIj7\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"11a426fb-4335-49a0-84cc-e95074d4a8ab\" name=\"Default Changelist\" comment=\"\" />\n      <created>1603799215262</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1603799215262</updated>\n      <workItem from=\"1603799217450\" duration=\"5488000\" />\n      <workItem from=\"1603808412258\" duration=\"3258000\" />\n      <workItem from=\"1603812385881\" duration=\"4685000\" />\n      <workItem from=\"1603857652058\" duration=\"3447000\" />\n      <workItem from=\"1603884258454\" duration=\"3478000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"540\" y=\"101\" width=\"700\" height=\"759\" key=\"#PHP\" timestamp=\"1603858025425\">\n      <screen x=\"72\" y=\"27\" width=\"1646\" height=\"901\" />\n    </state>\n    <state x=\"540\" y=\"101\" width=\"700\" height=\"759\" key=\"#PHP/72.27.1646.901@72.27.1646.901\" timestamp=\"1603858025425\" />\n    <state x=\"656\" y=\"261\" width=\"467\" height=\"439\" key=\"#Web_Browsers\" timestamp=\"1603803421052\">\n      <screen x=\"72\" y=\"27\" width=\"1646\" height=\"901\" />\n    </state>\n    <state x=\"656\" y=\"261\" width=\"467\" height=\"439\" key=\"#Web_Browsers/72.27.1646.901@72.27.1646.901\" timestamp=\"1603803421052\" />\n    <state x=\"690\" y=\"403\" width=\"399\" height=\"156\" key=\"NewPhpFileDialog\" timestamp=\"1603857899108\">\n      <screen x=\"72\" y=\"27\" width=\"1646\" height=\"901\" />\n    </state>\n    <state x=\"690\" y=\"403\" width=\"399\" height=\"156\" key=\"NewPhpFileDialog/72.27.1646.901@72.27.1646.901\" timestamp=\"1603857899108\" />\n    <state x=\"370\" y=\"145\" width=\"762\" height=\"644\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser\" timestamp=\"1603814159631\">\n      <screen x=\"72\" y=\"27\" width=\"1368\" height=\"873\" />\n    </state>\n    <state x=\"370\" y=\"145\" width=\"762\" height=\"644\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1368.873@72.27.1368.873\" timestamp=\"1603814159631\" />\n    <state x=\"586\" y=\"42\" width=\"618\" height=\"870\" key=\"find.popup\" timestamp=\"1604478594718\">\n      <screen x=\"72\" y=\"27\" width=\"1646\" height=\"901\" />\n    </state>\n    <state x=\"586\" y=\"42\" width=\"618\" height=\"870\" key=\"find.popup/72.27.1646.901@72.27.1646.901\" timestamp=\"1604478594718\" />\n    <state x=\"419\" y=\"214\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1603816837295\">\n      <screen x=\"72\" y=\"27\" width=\"1368\" height=\"873\" />\n    </state>\n    <state x=\"419\" y=\"214\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/72.27.1368.873@72.27.1368.873\" timestamp=\"1603816837295\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 77c173531386434c12bd45f2ac6f122ba47b6472)
++++ .idea/workspace.xml	(date 1604886602892)
+@@ -20,12 +20,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="11a426fb-4335-49a0-84cc-e95074d4a8ab" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/Webpage/image/pencil.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Webpage/storage/.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Webpage/storage/abc.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Webpage/storage/test.txt.txt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Webpage/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/homepage.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Webpage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/style.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Webpage/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webpage/functions.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -83,6 +80,8 @@
+       <workItem from="1603812385881" duration="4685000" />
+       <workItem from="1603857652058" duration="3447000" />
+       <workItem from="1603884258454" duration="3478000" />
++      <workItem from="1604827155623" duration="2118000" />
++      <workItem from="1604886239432" duration="364000" />
+     </task>
+     <servers />
+   </component>
+Index: Webpage/storage/test.txt.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Webpage/storage/test.txt.txt	(date 1604886669298)
++++ Webpage/storage/test.txt.txt	(date 1604886669298)
+@@ -0,0 +1,2 @@
++testTESTsssstset
++HELLOTESTTEST
+\ No newline at end of file

@@ -145,19 +145,6 @@ textarea{
     display: block;
 }
 
-.file-input{
-    padding-top: 50px;
-    padding-left: 12%;
-    font-family: Consolas,monaco,monospace;
-    font-weight: bold;
-    font-size: 15px;
-    float: left;
-    display: inline-block;
-}
-#filename{
-    padding: 10px;
-    font-family: Consolas,monaco,monospace;
-}
 
 .img-note{
     float: right;
@@ -183,13 +170,14 @@ textarea{
 
 .list-container{
     padding-top: 30px;
-    padding-left: 15%;
+    padding-left: 5%;
     font-family: Consolas,monaco,monospace;
     font-size: 20px;
     font-weight: bold;
     color: darkslateblue;
-    background-color: antiquewhite;
-    background: linear-gradient(to top, #caeff3, #faebd7 50%)
+    display: inline-block;
+    float: left;
+    height: 500px;
 }
 
 .file-button{
@@ -201,17 +189,69 @@ textarea{
 .read-container{
     font-family: Consolas,monaco,monospace;
     font-size: 20px;
+    padding-left: 10%;
     font-weight: bold;
+    padding-top: 30px;
     color: darkslateblue;
-    padding-top: 10px;
-    padding-left: 15%;
-    background: linear-gradient(to bottom, #caeff3, #faebd7);
+    display: inline-block;
+    float: left;
+    width: 45%;
 }
 
 #read-styling{
+    padding-top: 50px;
     font-size: 20px;
     font-family: Consolas,monaco,monospace;
     font-weight: normal;
     color: black;
     padding-left: 30px;
+}
+
+.list-elements{
+    border: 3px solid #A59D9D;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.read-elements{
+    border: 3px solid #A59D9D;
+    border-radius: 14px;
+    padding: 30px;
+    height: 500px;
+    width: 100%;
+}
+
+.img-pen{
+    padding-right: 150px;
+}
+
+.filename-container{
+    padding-top: 50px;
+}
+
+.filename-div{
+    padding-left: 150px;
+}
+
+.filename-btn-container{
+    padding-left: 100px;
+}
+
+.file-input{
+    padding-left: 11%;
+    font-family: Consolas,monaco,monospace;
+    font-weight: bold;
+    font-size: 25px;
+    float: left;
+    display: inline-block;
+    padding-top: 20px;
+}
+
+#filename{
+    padding: 20px;
+    font-size: 20px;
+    font-family: Consolas,monaco,monospace;
+}
+
+.save-btn {
 }
