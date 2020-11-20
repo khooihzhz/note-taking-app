@@ -16,11 +16,12 @@ function list_file(){
     $dir = 'storage';
     // SCAN THROUGH DATABASE
     $files = array_diff(scandir($dir), array('..', '.'));
+    $action = 0;
 
     // loop through every available files
     foreach ($files as $file) {
         //echo "<p><a href='views.php?file=$file'> $file </a> </p>";
-        echo "<ul> <li><a class='file-button' href='views.php?file=$file'> $file</a> </li></ul>";
+        echo "<ul> <li><div class='list-of-files'><a class='file-button' href='views.php?file=$file'>$file </a> <a href='views.php?file=$file&action=$action'><img class='trash-icon' src=image/trash.svg></a></div> </li></ul>";
     }
 
 }
@@ -39,6 +40,20 @@ function read_file(){
     }
 }
 
+function delete_file()
+{
+    //GET FILE
+
+    $action = $_GET['mode'];
+    $file = $_GET['file'];
+    if ($action == 0) {
+        if (is_file("storage/$file")) {
+            unlink("storage/$file");
+        }
+    }
+
+    return "$file IS DELETED";
+}
 
 
 

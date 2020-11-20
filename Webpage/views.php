@@ -8,8 +8,10 @@
     <!-- LINK TO FUNCTION PHP FILE -->
     <?php include 'functions.php';
     $filename = $_POST['filename'];
-    create_file($filename); ?>
-
+    $message = '';
+    create_file($filename);
+    $message = delete_file();
+    ?>
 </head>
 
 <!-- NavBar -->
@@ -22,6 +24,7 @@
 
 <body class="main-body">
 <div class="title"><h2 class="viewpage-title">View Your Notes Here!</h2></div>
+<div class='delete-txt'><?php echo $message ?></div>
 <div class="view-container">
     <div class="list-container">
         <div class="list-elements">
