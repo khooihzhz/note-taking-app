@@ -23,22 +23,26 @@
 <!-- END of NavBar -->
 
 <body class="main-body">
-<div class="title"><h2 class="viewpage-title">View Your Notes Here!</h2></div>
-<div class='delete-txt'><?php echo $message ?></div>
-<div class="view-container">
-    <div class="list-container">
-        <div class="list-elements">
-            <span>List of Notes</span>
-            <?php list_file(); ?>
+    <!-- Add title to the page -->
+    <div class="title"><h2 class="viewpage-title">View Your Notes Here!</h2></div>
+    <!-- Display deleted file -->
+    <div class='delete-txt'><?php echo $message ?></div>
+    <!-- Listing and Viewing -->
+    <div>
+        <div class="list-container">
+            <div class="list-elements">
+                <span>List of Notes</span>
+                <!-- Listing files from the directory -->
+                <?php list_file(); ?>
+            </div>
         </div>
-
-    </div>
-    <div class="read-container">
-        <div class="read-elements">
-        <span>Note is shown here:-</span>
-        <div id="read-styling"> <?php read_file(); ?> </div>
+        <div class="read-container">
+            <div class="read-elements">
+            <span>Note is shown here:-</span>
+                <!-- Read file content -->
+                <div id="read-styling"> <?php read_file(); ?> </div>
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>

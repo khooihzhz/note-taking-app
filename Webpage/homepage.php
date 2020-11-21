@@ -32,23 +32,24 @@
 <div class="main-container">
     <div class="title"><h2 class="homepage-title">Create Your Own Notes!</h2></div>
     <div>
-
         <!--Submit new Note note-->
         <form method="POST" action="views.php">
+            <!-- Display filename -->
             <div class="file-div">
                 <div class="file-input">
                     <p style="color: black"> Filename :<?php echo $filename ?></p>
                 </div>
+                <!-- Add image to the page -->
                 <div class="img-note">
                     <img id="pencil" src="image/pencil.png">
                 </div>
             </div>
-
-            <div class="writing-area">
+            <!-- Blank space for notes writing -->
+            <div>
                 <input type="hidden" name="filename" value="<?php echo $filename;?>">
-            <textarea id="notes" name="notes"  placeholder="Write your notes here!"><?php echo ($text_file); ?></textarea>
+            <textarea name="notes"  placeholder="Write your notes here!"><?php echo ($text_file); ?></textarea>
             </div>
-
+            <!-- Add buttons to the page -->
             <div class="submit-container">
                 <input class="submit-btn" type="submit" value="Save" style="margin-left: -30px; margin-right: 20px;">
                 <input class="submit-btn" type="reset" value="Clear">
